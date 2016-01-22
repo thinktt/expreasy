@@ -1,8 +1,8 @@
-# MEAN in Cloud Foundry: Part 1 - Nodejs & Express
+# Nodejs & Express - Disecting a Simple Server
 
 In this article we're going to look at a simple server built in Node using Express.  This article does expect that you have some experience with JavaScript and coding in general. It does not assume you have any expereince with Node. You should be somewhat familiar with using command line tools.
 
-All the code for this can be found [HERE]() if you would like to skip ahead and jump into trying out a mini Node-Express server.  
+All the code for this can be found [HERE](https://github.com/thinktt/expreasy) if you would like to skip ahead and jump straight into trying things out.  
 
 Let's get started!
 
