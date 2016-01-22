@@ -1,4 +1,4 @@
-# Nodejs & Express - Disecting a Simple Server
+# Nodejs & Express - Dissecting a Simple Server
 
 In this article we're going to look at a simple server built in Node using Express.  This article does expect that you have some experience with JavaScript and coding in general. It does not assume you have any expereince with Node. You should be somewhat familiar with using command line tools.
 
