@@ -86,7 +86,7 @@ npm install body-parser --save
 ### Step 5 Set up your static content
 We are going to use the public folder we made to server static content, and it will work just like any other static web server. You can add any html content you want in index.html in the public folder. For that matter if you want to throw a whole static website in the public folder go for it.  To get you started though here's  some simple html content you can paste into your index.html file. 
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
