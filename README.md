@@ -109,7 +109,7 @@ We are going to use the public folder we made to server static content, and it w
 
 ### Step 6 Enter your code
 First let's just copy and paste the code for our entire server, all 34 lines, and then we'll walk through each part individually. 
-```
+```javascript
 //...........Load modules used in the app.......
 var express = require('express');//get the express framework
 var app = express();// app becomes an instance of an express server
@@ -151,7 +151,7 @@ Now let's look at each individual part.
 
 
 #### Dependencies and require() 
-```
+```javascript
 //...........Load modules used in the app.......
 var express = require('express');//get the express framework
 var app = express();// app becomes an instance of an express server
@@ -166,7 +166,7 @@ You should recognize the other dependencies we're pulling in here from earlier w
 
 #### Configuration Variables
 
-```
+```javascript
 //..............Load Config Vars.................
 var port = process.env.PORT || 3000;
 ```
@@ -174,7 +174,7 @@ This may be a bit strange if you're not used to javascript, but essentially what
 
 
 #### Middleware
-```
+```javascript
 //...........Load in middleware................
 app.use(morgan('dev')); // log all request and errors 
 app.use(bodyParser.json()); //pareses JSON resulst
@@ -191,7 +191,7 @@ The express.static middelware (the only current built in middleware in Express) 
 
 #### Routes
 
-```
+```javascript
 /............Set up Routes............
 app.get('/greeting', function(req, res) {
  res.json({greeting: 'Howdy World!'});
@@ -205,7 +205,7 @@ app.post('/greeting', function(req, res) {
 
 This is where we set up our routes. This part may be a bit confusing if you're not used to looking at javaScript. These routes are using a typical callback style in JavaScript. The specification goes like this ```app.get(path, callback)``` The path is a string that specifies our route (in this case '/greeting') and the callback is a function that will be called when '/greeting' route is requested. This style is also confusing to beginners because it uses an ***anonymous function*** as it's second parameter. It's a very common style in JavaScript though, so you should try and get used to it. Still to make things a little more clear we could break these up, defining the function separately and then passing it to ```app.get()``` like so. 
 
-```
+```javascript
 var getGreeting = function(req, res) {
   var name = req.body.name;
   res.json({greeting: 'Howdy ' + name + '!' });
@@ -228,7 +228,7 @@ In the second line of our callback we actaully respond directly to the client th
 
 #### Starting the server with app.listen()
 
-```
+```javascript
 //.............Start the server............
 app.listen(port, function(err) {
   if(err) {
