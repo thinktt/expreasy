@@ -224,7 +224,7 @@ So in our case the request object has already passed through our body-parser mid
 
 In our example we retrieve ```name``` from ```req.body.name```. We could just use req.body.name directly but defining a variable at the beginning of our callback and pulling values out of req.body is a good practice in that it makes it explicitly clear what values we are using in our callback. 
 
-In the second line of our callback we actaully respond directly to the client that made the request with some JSON data. The response object can be modified by middlware in the same way as the request object, but Express also builds in a lot of handy function by default. res.json is one of these, and let's us respond to the client with JSON. 
+In the second line of our callback we actually respond directly to the client that made the request with some JSON data. The response object can be modified by middlware in the same way as the request object, but Express also builds in a lot of handy function by default. res.json is one of these, and let's us respond to the client with JSON. 
 
 #### Starting the server with app.listen()
 
