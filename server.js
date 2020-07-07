@@ -5,7 +5,7 @@ var morgan = require('morgan');//morgan is the express middleware logger
 var bodyParser = require('body-parser');// for parsing json requset
 
 //..............Load Config Vars.................
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 
 //...........Load in middleware................
@@ -15,6 +15,10 @@ app.use(express.static('public'));//serve static files
 
 
 //............Set up Routes............
+app.get('/health', function(req, res) {
+  res.json({greeting: 'Howdy World!'});
+ });
+
 app.get('/greeting', function(req, res) {
  res.json({greeting: 'Howdy World!'});
 });
